@@ -1,3 +1,13 @@
 from django.contrib import admin
 
-# Register your models here.
+from interntest.models import Product, Comment
+
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    pass
