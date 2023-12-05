@@ -18,7 +18,9 @@ from django.contrib import admin
 from django.urls import path
 from interntest.views import *
 
+from interntest.views import ProductAPIView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/', createall)
+    path('product/', ProductAPIView.as_view()),
 ]

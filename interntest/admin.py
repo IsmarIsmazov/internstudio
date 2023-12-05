@@ -1,6 +1,13 @@
 from django.contrib import admin
 
-from interntest.models import Bank
+from interntest.models import Product, Comment
 
-# Register your models here.
-admin.site.register(Bank)
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    pass
